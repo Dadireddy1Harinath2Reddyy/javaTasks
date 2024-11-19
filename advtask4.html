@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="fname">Enter the Word to check whether the word is palindrome or not ::: </label>
+        <input type="text" id="fname" name="fname"><br>
+        
+      </form>
+      <button onclick="fun1()">Check</button>
+      <h1 id ="head"></h1>
+      <script>
+        function fun1() {
+            let string = document.getElementById("fname");
+            let a = string.value
+            let b = "";
+            for(i =a.length-1;i>=0;i-- ){
+                b +=a[i];
+            }
+         let heading = document.getElementById("head");
+         if (a === b){
+             heading.innerHTML = `Given word ${a} is a palindrome.`;
+         }
+        else{
+            heading.innerHTML = `Given word ${a} is not a palindrome.`;
+        }
+
+
+
+        }
+      </script>
+
+    
+</body>
+</html>

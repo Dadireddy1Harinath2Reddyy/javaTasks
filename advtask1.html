@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="fname">User name:</label>
+        <input type="text" id="name" required><br><br>
+      </form>
+      <button onclick="fun1()">Submit to check whether username is valid or not</button>
+      <h1 id="field">
+
+      </h1>
+    <script>
+     function fun1(){
+        let inp = document.getElementById("name");
+        let a = inp.value 
+        let heading = document.getElementById("field");
+        let num = a.length
+        if(num>=5 && num <= 15){
+            heading.innerHTML ="User provided the valid user name";
+        } 
+        else{
+            heading.innerHTML ="User provided the Invalid user name";
+        }
+
+        
+     }
+    </script>
+
+</body>
+</html>
