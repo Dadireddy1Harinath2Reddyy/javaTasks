@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+// 3)Reverse an array using for loop 
+// hints 
+// use push method  
+let movies = ["jayam manadera","dj","aavara","bahubali","nayak"];
+let len = movies.length
+for(i = 0;i<=len/2;i++){
+    let temp = movies[i]
+    movies[i] = movies[len-i-1];
+    movies[len-i-1] = temp;
+}
+console.log(movies)
+
+    </script>
+</body>
+</html>

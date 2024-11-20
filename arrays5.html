@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         5) Take a heterogeneous array and separate each data type into new array
+// hints : use loop, typeof and push method 
+// inp: let arr = ["apple", "banana", "mango", "banana", 3, 4, 5, 6, true, {name: "object"}];
+// out : 
+// num=[3,4,5,6]
+// str=["apple","banana","mango","banana"]
+// bool=[true]
+// obj=[{name: "object"}]
+
+let arr = ["apple", "banana", "mango", "banana", 3, 4, 5, 6, true, {name: "object"}]; 
+let str = []
+let num = []
+let obj =[]
+let bol = []
+
+
+for(i =0;i<arr.length;i++)
+{
+    if(typeof(arr[i]) == "string")
+    {
+        str.push(i)
+    }
+    if(typeof(arr[i]) == "number")
+    {
+        num.push(i)
+    }
+    if(typeof(arr[i]) == "boolean")
+    {
+        bol.push(i)
+    }
+    if(typeof(arr[i]) == "number")
+    {
+        num.push(i)
+    }
+    if(typeof(arr[i]) == "object")
+    {
+        obj.push(i)
+    }
+}
+console.log(str)
+console.log(num)
+console.log(obj)
+console.log(bol)
+
+     
+    </script>
+</body>
+</html>
