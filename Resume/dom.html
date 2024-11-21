@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Creating DOM elements for the resume
+
+        // Create the main container
+        const container = document.createElement('div');
+
+        // Header section
+        const header = document.createElement('div');
+        header.classList.add('section');
+        const name = document.createElement('h1');
+        name.textContent = "HARINATH REDDY DADI REDDY";
+        const contact = document.createElement('p');
+        contact.innerHTML = "Contact: (91) 9392657212 | Email: harinath.reddy2003@gmail.com";
+        const links = document.createElement('p');
+        links.innerHTML = `LinkedIn: <a href="https://linkedin.com/in/HariReddy" target="_blank">linkedin.com/in/HariReddy</a> | 
+                           GitHub: <a href="https://github.com/Dadireddy1Harinath2Reddyy" target="_blank">github.com/Dadireddy1Harinath2Reddyy</a>`;
+        header.appendChild(name);
+        header.appendChild(contact);
+        header.appendChild(links);
+
+        // Add Professional Summary
+        const summary = document.createElement('div');
+        summary.classList.add('section');
+        const summaryHeading = document.createElement('h2');
+        summaryHeading.textContent = "PROFESSIONAL SUMMARY";
+        const summaryContent = document.createElement('p');
+        summaryContent.textContent = "Enthusiastic and skilled in Object-Oriented Programming, with strong proficiency in Python, Core Java, and MySQL...";
+        summary.appendChild(summaryHeading);
+        summary.appendChild(summaryContent);
+
+        // Education Section
+        const education = document.createElement('div');
+        education.classList.add('section');
+        const educationHeading = document.createElement('h2');
+        educationHeading.textContent = "EDUCATION";
+        const educationContent = document.createElement('p');
+        educationContent.innerHTML = "Bachelor of Technology in CSE (Data Science), 2020-2024<br>RGM College of Engineering and Technology, Nandyal<br>CGPA: 8.6/10";
+        education.appendChild(educationHeading);
+        education.appendChild(educationContent);
+
+        // Skills Section
+        const skills = document.createElement('div');
+        skills.classList.add('section');
+        const skillsHeading = document.createElement('h2');
+        skillsHeading.textContent = "TECHNICAL SKILLS";
+        const skillsList = document.createElement('ul');
+        ["Programming Languages: Python, Core Java", "Frontend Development: HTML, CSS, Bootstrap, JavaScript", "Databases: MySQL", "Version Control Software: Git, GitHub"].forEach(skill => {
+            const li = document.createElement('li');
+            li.textContent = skill;
+            skillsList.appendChild(li);
+        });
+        skills.appendChild(skillsHeading);
+        skills.appendChild(skillsList);
+
+        // Projects Section
+        const projects = document.createElement('div');
+        projects.classList.add('section');
+        const projectsHeading = document.createElement('h2');
+        projectsHeading.textContent = "PROJECTS";
+        const projectsContent = document.createElement('ul');
+        const projectData = [
+            { title: "Facial Feature-Based Drowsiness Detection", description: "Uses Multi-Scale Convolutional Neural Network to spot drowsiness." },
+            { title: "Food Munch", description: "Streamlined task management using HTML, CSS, and Bootstrap." },
+            { title: "Wikipedia Search Application", description: "Custom search application using REST API calls, HTML, CSS, and JS." }
+        ];
+        projectData.forEach(project => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${project.title}:</strong> ${project.description}`;
+            projectsContent.appendChild(li);
+        });
+        projects.appendChild(projectsHeading);
+        projects.appendChild(projectsContent);
+
+        // Append all sections to the container
+        container.appendChild(header);
+        container.appendChild(summary);
+        container.appendChild(education);
+        container.appendChild(skills);
+        container.appendChild(projects);
+
+        // Append container to body
+        document.body.appendChild(container);
+    </script>
+</body>
+</html>
