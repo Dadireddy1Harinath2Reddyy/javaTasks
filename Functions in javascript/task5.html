@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+function containsVowels(str) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    
+    for (let char of str.toLowerCase()) {
+        if (vowels.includes(char)) {
+            return `The string "${str}" contains vowels.`;
+        }
+    }
+    
+    return `The string "${str}" does not contain vowels.`;
+}
+
+/
+console.log(containsVowels("hello")); 
+console.log(containsVowels("hll"));   
+console.log(containsVowels("Sky"));   
+console.log(containsVowels("why"));  
+
+    </script>
+</body>
+</html>
