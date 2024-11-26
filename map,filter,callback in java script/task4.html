@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards using Map</title>
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            width: 250px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .card h3 {
+            margin: 10px 0;
+        }
+        .card p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="cardContainer" class="card-container"></div>
+
+    <script>
+        // Sample data array
+        const cardsData = [
+            {
+                title: "Card 1",
+                description: "This is the description for card 1",
+                imageUrl: "https://picsum.photos/200/300"
+            },
+            {
+                title: "Card 2",
+                description: "This is the description for card 2",
+                imageUrl: "https://picsum.photos/200/301"
+            },
+            {
+                title: "Card 3",
+                description: "This is the description for card 3",
+                imageUrl: "https://picsum.photos/200/302"
+            }
+            ,
+            {
+                title: "Card 4",
+                description: "This is the description for card 4",
+                imageUrl: "https://picsum.photos/200/304"
+            },
+            {
+                title: "Card 5",
+                description: "This is the description for card 5",
+                imageUrl: "https://picsum.photos/200/305"
+            },
+            {
+                title: "Card 6",
+                description: "This is the description for card 6",
+                imageUrl: "https://picsum.photos/200/306"
+            },
+            {
+                title: "Card 7",
+                description: "This is the description for card 7",
+                imageUrl: "https://picsum.photos/200/307"
+            },
+            {
+                title: "Card 8",
+                description: "This is the description for card 8",
+                imageUrl: "https://picsum.photos/200/308"
+            },
+            {
+                title: "Card 9",
+                description: "This is the description for card 9",
+                imageUrl: "https://picsum.photos/200/309"
+            },
+            {
+                title: "Card 10",
+                description: "This is the description for card 10",
+                imageUrl: "https://picsum.photos/200/310"
+            }
+        ];
+
+        // Get the container element
+        const container = document.getElementById('cardContainer');
+
+        // Create cards using map function
+        const cardElements = cardsData.map(card => {
+            return `
+                <div class="card">
+                    <img src="${card.imageUrl}" alt="${card.title}">
+                    <h3>${card.title}</h3>
+                    <p>${card.description}</p>
+                </div>
+            `;
+        }).join('');
+
+        // Insert the cards into the container
+        container.innerHTML = cardElements;
+    </script>
+</body>
+</html>
