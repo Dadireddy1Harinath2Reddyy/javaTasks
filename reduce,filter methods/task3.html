@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let people = [
+  {name:"John",age:17},
+  {name:"Jane",age:22},
+  {name:"Jim",age:15},
+  {name:"Jack",age:19}
+  ]
+  
+
+let newfiltered_people = people.filter((val,ind)=>{
+  return val.age>17
+})
+console.log(newfiltered_people)
+    </script>
+</body>
+</html>
